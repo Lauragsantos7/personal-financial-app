@@ -36,7 +36,7 @@ function RecoverPassword() {
 
         <Card.Body>
           <Form>
-            <Form.Group className="mb-3" controlId="formEmail">
+            <Form.Group className="mb-3">
               <Form.Label>Email</Form.Label>
               <Form.Control
                 className="form-control"
