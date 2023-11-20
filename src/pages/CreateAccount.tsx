@@ -1,8 +1,9 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useState } from "react";
 import { Card, Form, Button } from "react-bootstrap";
 
 function CreateAccount() {
+  const navigate = useNavigate();
   const [userData, setUserData] = useState({
     name: "",
     email: "",
@@ -15,6 +16,22 @@ function CreateAccount() {
       [target.name]: [target.value],
     });
   };
+
+  const redirectToHome = () => {
+    const userDataStorage = userData;
+    localStorage.setItem(
+        "userDataStorage",
+        JSON.stringify(userDataStorage)
+      );
+
+      setUserData({
+        name: "",
+        email: "",
+        birthday: "",
+      });
+    
+    navigate("/home");
+  }
 
   return (
     <>
@@ -94,7 +111,7 @@ function CreateAccount() {
             </Form.Group>
 
             <div className="btn btn-primary btn-block">
-              <Button type="button">Criar conta</Button>
+              <Button type="button" onClick={redirectToHome}>Criar conta</Button>
             </div>
             <div className="text-center">
               <Link to="/" className="d-block small mt-3">

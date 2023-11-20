@@ -1,0 +1,13 @@
+.headerText {
+    margin: 0;
+    padding: 0px;
+    color: white;
+    padding-top: 30px;
+}
+
+.header {
+    text-align: center;
+    background-color: blue;
+    height: 120px;
+
+}
