@@ -9,7 +9,7 @@ function LateralMenu() {
   return (
     <>
       <Navbar expand={false} className="bg-body-tertiary mb-3">
-        <Container fluid>
+        <Container >
           <Navbar.Brand href="#"></Navbar.Brand>
           <Navbar.Toggle />
           <Navbar.Offcanvas>
@@ -18,11 +18,11 @@ function LateralMenu() {
             </Offcanvas.Header>
             <Offcanvas.Body>
               <Nav className="justify-content-end flex-grow-1 pe-3">
-                <Nav.Link href="#action1">Home</Nav.Link>
+                <Nav.Link href="/home">Home</Nav.Link>
                 <Nav.Link href="#action2">Minha conta</Nav.Link>
-                <Nav.Link href="#action2">Privacidade</Nav.Link>
-                <Nav.Link href="#action2">Ajuda</Nav.Link>
-                <Nav.Link href="#action2">Sair</Nav.Link>
+                <Nav.Link href="#action12">Privacidade</Nav.Link>
+                <Nav.Link href="#action3">Ajuda</Nav.Link>
+                <Nav.Link href="/">Sair</Nav.Link>
                
               </Nav>
               {/* <Form className="d-flex">
